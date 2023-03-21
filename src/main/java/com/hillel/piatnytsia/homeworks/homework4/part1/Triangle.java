@@ -2,17 +2,17 @@ package com.hillel.piatnytsia.homeworks.homework4.part1;
 
 public class Triangle implements SquareFigure {
 
-    private double a = 4;
-    private double h = 3;
+    private double sideTriangle;
+    private double heightTriangle ;
 
 
-    public Triangle(double a, double h) {
-        this.a = a;
-        this.h = h;
+    public Triangle(double side, double height) {
+        this.sideTriangle = side;
+        this.heightTriangle = height;
     }
 
     @Override
     public double square() {
-        return 0.5 * a * h;
+        return 0.5 * sideTriangle * heightTriangle;
     }
 }

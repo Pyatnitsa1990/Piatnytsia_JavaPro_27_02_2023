@@ -1,15 +1,16 @@
 package com.hillel.piatnytsia.homeworks.homework4.part1;
 
 public class Circle implements SquareFigure {
-    private double r;
+    private double radiusCircle;
 
-    public Circle(double r) {
-        this.r = r;
+    public Circle(double radius) {
+        this.radiusCircle = radius;
     }
 
     @Override
     public double square() {
 
-        return Math.PI * Math.pow(r, 2);
+
+        return Math.PI * Math.pow(radiusCircle, 2);
     }
 }
