@@ -5,6 +5,7 @@ public class Car {
     public void start() {
         startElectricity();
         startCommand();
+        //TODO fix it
 
     }
 
