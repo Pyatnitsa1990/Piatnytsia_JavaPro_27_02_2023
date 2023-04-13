@@ -5,8 +5,6 @@ public class Car {
     public void start() {
         startElectricity();
         startFuelSystem();
-        startCommand();
-
     }
 
     private void startElectricity() {
