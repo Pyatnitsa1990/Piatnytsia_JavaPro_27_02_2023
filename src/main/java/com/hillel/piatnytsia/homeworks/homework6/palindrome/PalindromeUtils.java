@@ -1,10 +1,6 @@
 package com.hillel.piatnytsia.homeworks.homework6.palindrome;
 
 public final class PalindromeUtils {
-    @Override
-    public String toString() {
-        return "Palindrome{}";
-    }
 
     public static boolean isPalindrome(String s) {
 

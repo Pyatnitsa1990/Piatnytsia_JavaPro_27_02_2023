@@ -10,10 +10,10 @@ public final class TwoSumUtils {
 
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
-                    int[] arr = {i, j};
+                    int[] numsIndex = {i, j};
 
-                    System.out.println(Arrays.toString(arr));
-                    return arr;
+                    System.out.println(Arrays.toString(numsIndex));
+                    return numsIndex;
                 }
             }
 

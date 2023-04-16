@@ -8,13 +8,13 @@ public final class DuplicateUtils {
 
     public static boolean containsDuplicate(int[] nums) {
         Set<Integer> numbers = new HashSet<>();
-        for (Integer i : nums) {
-            if (numbers.contains(i)) {
+        for (Integer num : nums) {
+            if (numbers.contains(num)) {
                 System.out.println(Arrays.toString(nums));
                 System.out.println(true);
                 return true;
             }
-            numbers.add(i);
+            numbers.add(num);
         }
         System.out.println(Arrays.toString(nums));
         System.out.println(false);
