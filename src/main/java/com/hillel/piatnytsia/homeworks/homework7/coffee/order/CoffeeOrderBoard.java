@@ -5,8 +5,7 @@ import java.util.*;
 
 public class CoffeeOrderBoard {
 
-    Queue<Order> queue = new LinkedList<>() {
-    };
+    Queue<Order> queue = new LinkedList<>();
 
 
     public void add(Order order) {
