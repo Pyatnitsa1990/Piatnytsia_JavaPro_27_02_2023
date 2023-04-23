@@ -10,14 +10,16 @@ public final class FileNavigator {
         FileData file2 = new FileData("file2.txt", 4, "/downloads");
         FileData file3 = new FileData("Video.mkv", 3, "/Video");
         FileData file4 = new FileData("Trek.mp3", 2, "/Music");
-        FileData file5 = new FileData("Bit.mp3", 2, "/Music");
-        FileData file6 = new FileData("Bit.mp3", 2, "/Music");
+        FileData file5 = new FileData("Rock.mp3", 2, "/Music");
+        FileData file6 = new FileData("Bit.mp3", 4, "/Music");
+        FileData file7 = new FileData("Song.mp3", 4, null);
 
         add("/downloads", file1);
         add("/downloads", file2);
         add("/Video", file3);
         add("/Music", file4);
         add("/Music", file5);
+
         printMap();
 
 
@@ -31,6 +33,8 @@ public final class FileNavigator {
         sortBySize();
 
         add("/textDocuments", file6);
+        add(null, file7);
+
     }
 
     private static final Map<String, Set<FileData>> files = new HashMap<>();
@@ -42,8 +46,11 @@ public final class FileNavigator {
     };
 
     public static void add(String filePath, FileData fileData) {
-        if (!Objects.equals(filePath, fileData.getFilePath())) {
-            System.out.printf("\nYou can't add file because path are different");
+        if (filePath == null && fileData.getFilePath() == null) {
+            System.out.printf("\nYou can't add a file "+ fileData.getName() + " because the path is missing.\"");
+            return;
+       } else if (!Objects.equals(filePath, fileData.getFilePath())){
+            System.out.printf("You can't add a file "+ fileData.getName() + " because the path to it is different.\"");
             return;
         }
 
@@ -51,7 +58,6 @@ public final class FileNavigator {
             Set<FileData> mappedFileData = files.get(filePath);
             mappedFileData.add(fileData);
         } else {
-            //додаємо файл
             Set<FileData> newFileData = new HashSet<>();
             newFileData.add(fileData);
             files.put(filePath, newFileData);
