@@ -1,6 +1,8 @@
 package com.hillel.piatnytsia.homeworks.homework6.twosum;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public final class TwoSumUtils {
 
@@ -21,6 +23,21 @@ public final class TwoSumUtils {
         }
 
         return nums;
-    }
 
+    }
+    public static int[] twoSumVersion2(int[] nums, int target) {
+        Set<Integer> numbers = new HashSet<>();
+        for (int i = 0; i <nums.length ; i++) {
+            if(numbers.contains(target -nums[i])){
+                for (int j = 0; j <nums.length ; j++) {
+                    if(nums[j]==target-nums[i]){
+                        return new int[]{i,j};
+                    }
+                }
+            }
+            numbers.add(nums[i]);
+        }
+
+        return nums;
+    }
 }
