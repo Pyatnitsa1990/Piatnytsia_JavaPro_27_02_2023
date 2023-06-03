@@ -1,4 +1,4 @@
-package com.hillel.piatnytsia.homeworks.homeworks13;
+package com.hillel.piatnytsia.homeworks.homeworks13.task1;
 public class BuyTime {
     public static int maxProfit(int[] prices) {
         int profit = 0;
