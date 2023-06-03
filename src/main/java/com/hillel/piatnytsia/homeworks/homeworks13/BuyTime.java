@@ -1,8 +1,4 @@
 package com.hillel.piatnytsia.homeworks.homeworks13;
-
-import java.util.Arrays;
-import java.util.OptionalInt;
-
 public class BuyTime {
     public static int maxProfit(int[] prices) {
         int profit = 0;
